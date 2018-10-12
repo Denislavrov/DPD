@@ -1,5 +1,6 @@
 'use strict'
 
+const WH = require('node-webhook')
 const Telegram = require('telegram-node-bot')
 
 const TelegramBaseController = Telegram.TelegramBaseController
