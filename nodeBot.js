@@ -7,9 +7,9 @@ const TextCommand = Telegram.TextCommand
 const tg = new Telegram.Telegram('646372471:AAGeB5J7Dw2Ih3zY_Kne94bfz4SZUPnDYf8', {
     workers: 1,
     webhook: {
-        url: '',
-        port: '3000',
-        host: 'localhost'
+        url: 'https://infinite-oasis-61272.herokuapp.com/',
+        port: '7777',
+        host: '0.0.0.0'
     }
 })
 
