@@ -4,19 +4,7 @@ const Telegram = require('telegram-node-bot')
 
 const TelegramBaseController = Telegram.TelegramBaseController
 const TextCommand = Telegram.TextCommand
-const tg = new Telegram.Telegram('646372471:AAGeB5J7Dw2Ih3zY_Kne94bfz4SZUPnDYf8', {
-    workers: 1,
-    webhook: {
-        url: process.env.WEBHOOK_URL || 'https://cryptic-shelf-51638.herokuapp.com',
-        port: process.env.PORT || 8081,
-        host: process.env.WEBHOST || 'cryptic-shelf-51638.herokuapp.com'
-    },
-    webAdmin: {
-        port: process.env.PORT || 8081,
-        host: process.env.HOST || 'cryptic-shelf-51638.herokuapp.com'
-
-    }
-})
+const tg = new Telegram.Telegram('646372471:AAGeB5J7Dw2Ih3zY_Kne94bfz4SZUPnDYf8');
 
 class PingController extends TelegramBaseController {
     /**
