@@ -31,7 +31,7 @@ class StopController extends TelegramBaseController {
 
     get routes() {
         return {
-            'stopHandler': 'stopsssssss'
+            'stopHandler': 'stop'
         }
     }
 }
