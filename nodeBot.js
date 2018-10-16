@@ -41,7 +41,9 @@ class StopController extends TelegramBaseController {
 tg.router
     .when(
         new TextCommand('/start', 'startHandler'),
-        new StartController(),
+        new StartController()
+    )
+    .when(
         new TextCommand('stop', 'stopHandler'),
         new StopController()
     )
