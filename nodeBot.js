@@ -6,23 +6,23 @@ const TelegramBaseController = Telegram.TelegramBaseController
 const TextCommand = Telegram.TextCommand
 const tg = new Telegram.Telegram('646372471:AAGeB5J7Dw2Ih3zY_Kne94bfz4SZUPnDYf8');
 
-class PingController extends TelegramBaseController {
+class StartController extends TelegramBaseController {
     /**
      * @param {Scope} $ 
      */
-    pingHandler($) {
-        $.sendMessage('pong')
+    start($) {
+        $.sendMessage('Hello!')
     }
 
     get routes() {
         return {
-            'pingCommand': 'pingHandler'
+            'startHandler': 'start'
         }
     }
 }
 
 tg.router
     .when(
-        new TextCommand('ping', 'pingCommand'),
-        new PingController()
+        new TextCommand('/start', 'startHandler'),
+        new StartController()
     )
