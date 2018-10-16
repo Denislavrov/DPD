@@ -21,8 +21,27 @@ class StartController extends TelegramBaseController {
     }
 }
 
+class StopController extends TelegramBaseController {
+    /**
+     * @param {Scope} $ 
+     */
+    stop($) {
+        $.sendMessage('fuck you!')
+    }
+
+    get routes() {
+        return {
+            'stopHandler': 'stopsssssss'
+        }
+    }
+}
+
+
+
 tg.router
     .when(
         new TextCommand('/start', 'startHandler'),
-        new StartController()
+        new StartController(),
+        new TextCommand('stop', 'stopHandler'),
+        new StopController()
     )
