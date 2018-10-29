@@ -12,6 +12,21 @@ class OtherwiseController extends TelegramBaseController {
     }
 }
 
+class StartConstoller extends TelegramBaseController {
+    /**
+     * @param {Scope} $ 
+     */
+    start($) {
+        $.sendMessage('Hello!')
+    }
+
+    get routes() {
+        return {
+            'startHandler': 'start'
+        }
+    }
+}
+
 
 
 
