@@ -8,9 +8,11 @@ const tg = new Telegram.Telegram('646372471:AAGeB5J7Dw2Ih3zY_Kne94bfz4SZUPnDYf8'
 
 class OtherwiseController extends TelegramBaseController {
     handle() {
-        console.log('otherwise')
+        $.sendMessage('otherwise')
     }
 }
+
+
 
 
 
