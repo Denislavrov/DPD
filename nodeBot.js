@@ -22,7 +22,7 @@ class StartConstoller extends TelegramBaseController {
 
     get routes() {
         return {
-            'startHandler': 'start'
+            'startCommand': 'start'
         }
     }
 }
