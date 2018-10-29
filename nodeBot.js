@@ -7,10 +7,13 @@ const keyboard = Markup.inlineKeyboard([
     Markup.urlButton('🤓', 'http://google.com'),
     Markup.callbackButton('Удалить', 'delete')
 ])
-
+const btn = Markup.inlineKeyboard([
+    Markup.help('помощь', 'help'),
+    Markup.more('more...', 'more')
+])
 const bot = new Telegraf('646372471:AAGeB5J7Dw2Ih3zY_Kne94bfz4SZUPnDYf8');
 bot.start((ctx) => ctx.reply('Привет!'))
-bot.help((ctx) => ctx.reply('Если вам нужна помощь....'))
+bot.help((ctx) => ctx.reply('нужна помощь', Extra.markup(btn)))
 bot.on('message', (ctx) => ctx.telegram.sendCopy(ctx.from.id, ctx.message, Extra.markup(keyboard)))
 bot.action('delete', ({ deleteMessage }) => deleteMessage())
 bot.on('sticker', (ctx) => ctx.reply('❤️'))
