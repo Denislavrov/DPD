@@ -40,8 +40,8 @@ tg.router
     .when(new TextCommand('/restart', 'restartCommand'), new RestartController())
     .otherwise(new OtherwiseController())
 
-
-.when(
-    new TextCommand('/start', 'startHandler'),
-    new StartController()
-)
+tg.router
+    .when(
+        new TextCommand('/start', 'startHandler'),
+        new StartController()
+    )
