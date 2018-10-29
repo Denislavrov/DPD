@@ -4,7 +4,7 @@ const Extra = require('telegraf/extra')
 const Markup = require('telegraf/markup')
 
 const keyboard = Markup.inlineKeyboard([
-    Markup.urlButton('❤️', 'http://google.com'),
+    Markup.urlButton('🤓', 'http://google.com'),
     Markup.callbackButton('Удалить', 'delete')
 ])
 
