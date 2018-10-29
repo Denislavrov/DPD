@@ -37,14 +37,9 @@ const keyboard = Markup.inlineKeyboard([
     Markup.callbackButton('Удалить', 'delete')
 ])
 
-const buttons = Markup.inlineKeyboard([
-    Markup.testButton('тест', test)
-])
-
 const bot = new Telegraf('646372471:AAGeB5J7Dw2Ih3zY_Kne94bfz4SZUPnDYf8');
 bot.start((ctx) => ctx.reply('Привет!'))
 bot.help((ctx) => ctx.reply('Если вам нужна помощь....'))
 bot.on('message', (ctx) => ctx.telegram.sendCopy(ctx.from.id, ctx.message, Extra.markup(keyboard)))
 bot.action('delete', ({ deleteMessage }) => deleteMessage())
-bot.on('qwerty', (ctx) => ctx.telegram.sendCopy(ctx.from.id, ctx.qwerty, Extra.markup(buttons)))
 bot.startPolling()
