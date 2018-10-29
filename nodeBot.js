@@ -22,25 +22,13 @@ class StartController extends TelegramBaseController {
 
     get routes() {
         return {
-            'startHandler': 'start'
+            'startComand': 'start'
         }
     }
 }
 
-
-
-
-
-
-
-
 tg.router
+    .when(new TextCommand('/start', 'startCommand'), new StopController())
     .when(new TextCommand('/stop', 'stopCommand'), new StopController())
     .when(new TextCommand('/restart', 'restartCommand'), new RestartController())
     .otherwise(new OtherwiseController())
-
-tg.router
-    .when(
-        new TextCommand('/start', 'startHandler'),
-        new StartController()
-    )
